@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+}
+
+/* REUSABLE */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-hidden {
+    /* cant animate from display none but visibility hidden only shows the R */
+    display: none;
+}
+
+/* end of REUSABLE */
+
+/* ENTRANCE */
+
+#entrance {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.center:hover {
+    cursor: pointer;
+}
+
+#name {
+    background-image: url("./assets/giphy.gif");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 15rem;
+    font-family: 'Russo One', sans-serif;
+    user-select: none;
+}
+
+#click {
+    user-select: none;
+    animation: animate 3s linear infinite;
+    font-family: 'Sen', sans-serif;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* end of ENTRANCE */
+
+/* LAYOUT */
+
+#fullName {
+    font-size: 4rem;
+    font-family: 'Russo One', sans-serif;
+    user-select: none;
+}
+
+.partial {
+    margin-right: 1rem;
+}
+
+/* end of LAYOUT */
