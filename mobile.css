@@ -1,0 +1,264 @@
+/* Chapters:
+        Reusable,
+        Entrance,
+        Layout,
+        Menubutton
+Ctrl + f */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color .7s ease;
+    height: 100%;
+}
+
+.white {
+    background-color: white;
+}
+
+.gray {
+    background-color: #333;
+}
+
+/* REUSABLE */
+
+.overflow {
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offTop {
+    transform: translateY(-100vh);
+}
+
+.offRight {
+    transform: translateX(100vw);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.is-none {
+    display: none;
+}
+
+/* end of REUSABLE */
+
+/* ENTRANCE */
+
+#entrance {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    transition: transform 1s ease-out;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    border: solid 0.5rem black;
+}
+
+#entrance:hover {
+    cursor: pointer;
+}
+
+#name {
+    background-image: url("./assets/giphy.gif");
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 15rem;
+    font-family: 'Russo One', sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#click {
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Sen', sans-serif;
+    opacity: 1;
+    transition: 1s opacity;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* end of ENTRANCE */
+
+/* LAYOUT (mobile)*/
+
+#layout {
+    z-index: 1;
+    position: absolute;
+    max-width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    right: 1rem;
+    padding-top: 1rem;
+    position: fixed;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#navInner {
+    position: absolute;
+    top: 0;
+    padding: 5rem 1rem 1rem;
+    background-color: white;
+    border-radius: 0 0 0 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#navInner>a {
+    text-decoration: none;
+}
+
+#start {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-width: 100%;
+    /* for transitions off screen */
+    overflow-x: hidden;
+}
+
+#nameTitel {
+    transition: transform 1s ease-in;
+}
+
+#nameTitel>h1 {
+    font-size: 3rem;
+    font-family: 'Russo One', sans-serif;
+}
+
+#nameTitel>h2 {
+    font-family: 'Robot', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#nameTitel>h3 {
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+#me {
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.linebreak {
+    margin: 1rem auto;
+    height: 2px;
+    border-width: 0;
+    width: 350px;
+    color: black;
+    background-color: black;
+}
+
+.text {
+    width: 80%;
+    padding-top: 4rem;
+}
+
+/* end of LAYOUT */
+
+/* MENUBUTTON */
+
+#menuButton {
+    width: 60px;
+    z-index: 2;
+    height: 45px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#menuButton span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#menuButton span:nth-child(1) {
+    top: 0px;
+}
+
+#menuButton span:nth-child(2),
+#menuButton span:nth-child(3) {
+    top: 18px;
+}
+
+#menuButton span:nth-child(4) {
+    top: 36px;
+}
+
+#menuButton.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#menuButton.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#menuButton.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#menuButton.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+/* end of MENUBUTTON */
