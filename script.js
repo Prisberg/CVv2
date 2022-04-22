@@ -111,7 +111,7 @@ function modeSwitch() {
 }
 
 function menuSwitch() {
-    const button = document.getElementById('menuButton')
+    const button = document.getElementById('menuBurger')
     const menuInner = document.getElementById('navInner')
 
     button.addEventListener('click', () => {
@@ -124,7 +124,7 @@ function menuSwitch() {
 }
 
 function iconSwitch() {
-    const icon = document.getElementById('menuButton');
+    const icon = document.getElementById('menuBurger');
 
     icon.addEventListener('click', () => {
         if (icon.className === '') {

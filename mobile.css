@@ -113,8 +113,8 @@ body {
 
 nav {
     display: flex;
-    justify-content: center;
-    right: 1rem;
+    justify-content: flex-end;
+    width: 100%;
     padding-top: 1rem;
     position: fixed;
     -webkit-user-select: none;
@@ -124,8 +124,10 @@ nav {
 #navInner {
     position: absolute;
     top: 0;
+    width: max-content;
     padding: 5rem 1rem 1rem;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
     border-radius: 0 0 0 1rem;
     transition: transform 0.3s ease-in-out;
 }
@@ -187,8 +189,9 @@ nav {
 
 /* MENUBUTTON */
 
-#menuButton {
+#menuBurger {
     width: 60px;
+    margin-right: 1rem;
     z-index: 2;
     height: 45px;
     position: relative;
@@ -203,7 +206,7 @@ nav {
     cursor: pointer;
 }
 
-#menuButton span {
+#menuBurger span {
     display: block;
     position: absolute;
     height: 9px;
@@ -222,43 +225,50 @@ nav {
     transition: .25s ease-in-out;
 }
 
-#menuButton span:nth-child(1) {
+#menuBurger span:nth-child(1) {
     top: 0px;
 }
 
-#menuButton span:nth-child(2),
-#menuButton span:nth-child(3) {
+#menuBurger span:nth-child(2),
+#menuBurger span:nth-child(3) {
     top: 18px;
 }
 
-#menuButton span:nth-child(4) {
+#menuBurger span:nth-child(4) {
     top: 36px;
 }
 
-#menuButton.open span:nth-child(1) {
+#menuBurger.open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%;
 }
 
-#menuButton.open span:nth-child(2) {
+#menuBurger.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-#menuButton.open span:nth-child(3) {
+#menuBurger.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-#menuButton.open span:nth-child(4) {
+#menuBurger.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
 }
 
-/* end of MENUBUTTON */
+.menuButtons {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Sen', sans-serif;
+    color: black;
+}
+
+/* end of MENUBurger */
