@@ -1,25 +1,12 @@
 let interval;
-let pathBoolean = false;
-
-function loadFix() {
-    let path = window.location.href.toString()
-    if (path.includes('#')) {
-        pathBoolean = true;
-        enter();
-    } else {
-        return;
-    }
-}
+const width = window.matchMedia("(max-width: 700px)")
 
 window.onload = function () {
-    loadFix();
-    if (!pathBoolean) {
-        addListener();
-    } else {
-        return;
-    }
-
+    tabletMedia(width)
+    width.addEventListener('change', tabletMedia)
     interval = setInterval(welcome, 1250)
+
+    addListener();
 }
 
 function welcome() {
@@ -35,18 +22,12 @@ function welcome() {
 }
 
 function addListener() {
-    window.addEventListener('click', enter);
-}
-
-function removeListener() {
-    window.removeEventListener('click', enter);
+    window.addEventListener('click', enter, { once: true });
 }
 
 function enter() {
-    removeListener();
     goToContent();
     clearInterval(interval);
-    document.body.classList.remove('overflow');
 }
 
 function goToContent() {
@@ -58,6 +39,7 @@ function goToContent() {
     entrance.classList.add('offTop');
     entrance.addEventListener('transitionend', () => {
         entrance.className = 'is-none'
+        document.body.classList.remove('overflow');
     })
 
     layout.className = '';
@@ -99,7 +81,6 @@ function langSwitch() {
 function modeSwitch() {
     const button = document.getElementById('modeButton')
     button.addEventListener('click', () => {
-        console.log('click')
         if (document.body.className === 'white') {
             document.body.className = 'gray';
             button.textContent = 'Light-mode';
@@ -117,20 +98,51 @@ function menuSwitch() {
     button.addEventListener('click', () => {
         if (menuInner.classList.contains('offRight')) {
             menuInner.classList.remove('offRight')
+            outsideMenu();
         } else {
             menuInner.classList.add('offRight')
         }
     })
 }
 
-function iconSwitch() {
+function outsideMenu() {
+    const layout = document.getElementById('layout')
+    const menuInner = document.getElementById('navInner')
     const icon = document.getElementById('menuBurger');
 
+    layout.addEventListener("click", () => {
+        if (width.matches) {
+            menuInner.classList.add('offRight')
+            icon.classList.remove('open')
+        } else {
+            return;
+        }
+    }, { once: true })
+}
+
+
+function iconSwitch() {
+    const icon = document.getElementById('menuBurger');
+    const menuInner = document.getElementById('navInner')
+
     icon.addEventListener('click', () => {
-        if (icon.className === '') {
+        if (!menuInner.classList.contains('offRight')) {
             icon.classList.add('open')
         } else {
             icon.classList.remove('open')
         }
     })
+}
+
+function tabletMedia(width) {
+    const icon = document.getElementById('menuBurger');
+    const menuInner = document.getElementById('navInner')
+
+    if (width.matches) {
+        menuInner.classList.add('offRight')
+        icon.classList.remove('open')
+    } else {
+        menuInner.classList.remove('offRight')
+        icon.classList.add('open')
+    }
 }

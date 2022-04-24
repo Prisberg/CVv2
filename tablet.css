@@ -1,0 +1,27 @@
+@media only screen and (min-width: 700px) {
+
+    #menuBurger {
+        display: none;
+    }
+
+    #navInner {
+        padding-top: 1rem;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menuButtons {
+        width: max-content;
+    }
+
+    .rowSpace {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

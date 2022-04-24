@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="./assets/pr.png">
-    <link rel="stylesheet" href="mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Russo+One&family=Sen&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Russo+One&family=Sen&display=swap"
+    rel="stylesheet">
 
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="desktop.css">
+
+    <script src="https://kit.fontawesome.com/c412bb76bf.js" crossorigin="anonymous"></script>
     <script defer src="./script.js"></script>
 
     <title>Philip Risberg | Front End Developer</title>
@@ -29,33 +33,33 @@
         </span>
     </div>
 
+    <nav>
+        <div id="menuBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="navInner" class="offRight column center">
+            <a href="#start" class="menuButtons">
+                <span>Start</span>
+            </a>
+            <a href="#about" class="menuButtons">
+                <span lang="en">About</span>
+                <span lang="sv" class="is-none">Om mig</span>
+            </a>
+            <a href="#links" class="menuButtons">
+                <span lang="en">Links</span>
+                <span lang="sv" class="is-none">Länkar</span>
+            </a>
+            <!-- change for icon -->
+            <button type="button" id="modeButton" class="menuButtons">Dark-mode</button>
+            <button type="button" id="langButton" class="menuButtons">Svenska</button>
+        </div>
+    </nav>
+
     <div id="layout">
-        <nav>
-
-            <div id="menuBurger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div id="navInner" class="offRight column center">
-                <a href="#start" class="menuButtons">
-                    <span>Start</span>
-                </a>
-                <a href="#about" class="menuButtons">
-                    <span lang="en">About</span>
-                    <span lang="sv" class="is-none">Om mig</span>
-                </a>
-                <a href="#links" class="menuButtons">
-                    <span lang="en">Links</span>
-                    <span lang="sv" class="is-none">Länkar</span>
-                </a>
-                <!-- change for icon -->
-                <button type="button" id="modeButton" class="menuButtons">Dark-mode</button>
-                <button type="button" id="langButton" class="menuButtons">Svenska</button>
-            </div>
-        </nav>
         <div id="start" class="center column">
             <img id="me" src="./assets/me.png" alt="me">
             <div id="nameTitel" class="center column offRight">
@@ -68,139 +72,138 @@
         </div>
         <div class="center column">
             <div id="about" class="text">
-                <p lang="en">
-                    About:
-                    Born: 1997-07-17.
-
-                    Birthplace: Höör, Scania.
-
-                    Gender: Male.
-
-                    Skillsets:
-                    Html5
-
-                    CSS3
-
-                    Ux design
-
-                    JavaScript
-
-                    Photoshop
-
-                    Microsoft 365 office
-                </p>
-                <p lang="sv" class="is-none">
-                    Om mig:
-                    Född: 1997-07-17.
-
-                    födelseort: Höör, Skåne.
-
-                    Kön: Man.
-
-                    Kompetens:
-                    Html5
-
-                    CSS3
-
-                    Ux design
-
-                    JavaScript
-
-                    Photoshop
-
-                    Microsoft 365 office
-                </p>
+                <div class="rowSpace">
+                    <div lang="en">
+                        <h3>About:</h3>
+                        <p>Born: 1997-07-17.</p>
+                        <p>Birthplace: Höör, Scania.</p>
+                        <p>Gender: Male.</p>
+                    </div>
+                    <div lang="en">
+                        <h3>Skillsets:</h3>
+                        <p>Html5</p>
+                        <p>CSS3</p>
+                        <p>Ux design</p>
+                        <p>JavaScript</p>
+                        <p>Photoshop</p>
+                        <p>Microsoft 365 office</p>
+                    </div>
+                    <div lang="sv" class="is-none">
+                        <h3>Om mig:</h3>
+                        <p>Född: 1997-07-17.</p>
+                        <p>födelseort: Höör, Skåne.</p>
+                        <p>Kön: Man.</p>
+                    </div>
+                    <div lang="sv" class="is-none">
+                        <h3>Kompetens:</h3>
+                        <p>Html5</p>
+                        <p>CSS3</p>
+                        <p>Ux design</p>
+                        <p>JavaScript</p>
+                        <p>Photoshop</p>
+                        <p>Microsoft 365 office</p>
+                    </div>
+                </div>
             </div>
             <div class="text">
-                <p lang="en">
-                    Dear future employer,
-                    I am a student at Medieinstitutet in Gothenburg where I am studying to become a Front End Developer.
-                    My
-                    long
-                    term goal is to make a living doing what I love, which is to be creative. I am very motivated by
-                    challenging
-                    myself and taking on responsibilities, which is in large part why I moved to Gothenburg from Scania
-                    for
-                    this
-                    education.
+                <div lang="en">
+                    <h3>Dear potential employer,</h3>
+                    <p>
+                        I am a student at Medieinstitutet in Gothenburg where I am studying to become a Front End
+                        Developer. My long term goal is to make a living doing what I love, which is to be creative. I
+                        am very
+                        motivated by challenging myself and taking on responsibilities, which is in large part why I
+                        moved to
+                        Gothenburg from Scania for this education.
+                    </p>
+                    <p>
+                        At the moment of writing this cover letter my experience as a Front End Developer is limited.
+                        This far into my education I have completed assignments in Html5, CSS3 and JavaScript. Besides
+                        these
+                        I have also completed a course on UX design. What I would love now is some hands-on experience
+                        in the actual
+                        working life of a web developer.
+                    </p>
+                    <p>
+                        As a person I am calm, curious and friendly. My interest lies in anything tech related,
+                        creative, challenging and adventurous. Examples include strength training, drawing and some
+                        amateur level
+                        photography.
+                    </p>
+                    <p>
+                        If you would like to find out more about me or get in contact all my relevant links are in the
+                        next section below.
+                    </p>
 
-                    At the moment of writing this cover letter my experience as a Front End Developer is limited. This
-                    far
-                    into
-                    my education I have completed assignments in Html5, CSS3 and JavaScript. Besides these I have also
-                    completed
-                    a course on UX design.
-
-                    What I would love now is some hands-on experience in the actual working life of a web developer.
-
-                    As a person I am calm, curious and friendly. My interest lies in anything tech related, creative,
-                    challenging and adventurous. Examples include strength training, drawing and some amateur level
-                    photography.
-
-                    If you would like to find out more about me or get in contact all my relevant links are in the next
-                    section
-                    below.
-
-                    What I would love now is some hands-on experience in the actual working life of a web developer.
-
-                    As a person I am calm, curious and friendly. My interest lies in anything tech related, creative,
-                    challenging and adventurous. Examples include strength training, drawing and some amateur level
-                    photography.
-
-                    If you would like to find out more about me or get in contact all my relevant links are in the next
-                    section
-                    below.
-                </p>
-                <p lang="sv" class="is-none">
-                    Hej,
-                    Jag studerar till Front end utvecklare på Medieinstitutet i Göteborg. Mitt långsiktiga mål är att ta
-                    anställning där mina arbetsuppgifter är sammanflätade med min passion för kreativitet.
-                    Jag är som person väldigt motiverad av att anta utmaningar och ansvar. Detta är till stor del
-                    anledningen
-                    till att jag flyttade från Skåne till Göteborg för utbildningen. I skrivande stund är min kunskap
-                    och
-                    erfarenhet inom Front end fortfarande begränsad. Jag har avklarat uppgifter inom Html5, CSS3,
-                    JavaScript.
-                    Jag har även fullföljt en kurs i UX design. Det jag söker nu är erfarenheten man får i arbetslivet
-                    som
-                    Front
-                    end utvecklare.
-
-                    Som person är jag lugn, nyfiken och vänlig. Mina intressen ligger mycket i teknologi, kreativitet,
-                    utmaningar och äventyr. Som exempel på detta är jag glad för styrketräning, teckna samt klättring.
-
-                    Om du vill ta reda på mer om mig eller komma i kontakt så hittar du relevanta länkar och information
-                    längre
-                    ner.
-                </p>
+                </div>
+                <div lang="sv" class="is-none">
+                    <h3>Hej,</h3>
+                    <p>
+                        Jag studerar till Front end utvecklare på Medieinstitutet i Göteborg. Mitt långsiktiga mål är
+                        att ta
+                        anställning där mina arbetsuppgifter är sammanflätade med min passion för kreativitet. Jag är
+                        väldigt motiverad
+                        av att anta utmaningar och ansvar, detta är till stor del
+                        anledningen till att jag flyttade från Skåne till Göteborg för utbildningen.
+                    </p>
+                    <p>
+                        I skrivande stund är min kunskap och erfarenhet inom Front end fortfarande begränsad. Jag har
+                        avklarat
+                        uppgifter inom Html5, CSS3, JavaScript. Jag har även fullföljt en kurs i UX design. Det jag
+                        söker nu är
+                        erfarenheten man får i arbetslivet som Front end utvecklare.
+                    </p>
+                    <p>
+                        Som person är jag lugn, nyfiken och vänlig. Mina intressen ligger mycket i teknologi,
+                        kreativitet,
+                        utmaningar och äventyr. Som exempel på detta är jag glad för styrketräning, teckna samt
+                        klättring.
+                    </p>
+                    <p>Om du vill veta mer om mig eller komma i kontakt så hittar du relevanta länkar och information
+                        längre ner.</p>
+                </div>
             </div>
-            <div id="links" class="text">
-                <p lang="en">
-                    Thank you..
-                    for checking out my resume, I look forward to hearing from you.
-
-                    Best regards,
-                    Philip Risberg
-
-                    Contact information:
-                    Email: fille.risberg@live.se
-                    Phone number: 0733805263
-
-                    Links:
-                </p>
-                <p lang="sv" class="is-none">
-                    Tack..
-                    för att du besökte mitt CV, jag ser fram emot att höra från er.
-
-                    Vänliga hälsningar,
-                    Philip Risberg
-
-                    Kontakt information:
-                    Email: fille.risberg@live.se
-                    Mobil: 0733805263
-
-                    Länkar:
-                </p>
+            <!-- ROWSPACE -->
+            <div id="links" class="text center column">
+                <div lang="en">
+                    <div class="text">
+                        <h3>Thank you..</h3>
+                        <p>for visiting my CV, I look forward to hearing from you.</p>
+                        <p>Best regards,</p>
+                        <p>Philip Risberg</p>
+                    </div>
+                    <div>
+                        <h3>Contact information:</h3>
+                        <div class="center column">
+                            <p>Email: fille.risberg@live.se</p>
+                            <p>Phone number: 0733805263</p>
+                        </div>
+                    </div>
+                </div>
+                <div lang="sv" class="is-none">
+                    <div class="text">
+                        <h3>Tack..</h3>
+                        <p>för att du besökte mitt CV, jag ser fram emot att höra från er.</p>
+                        <p>Vänliga hälsningar,</p>
+                        <p>Philip Risberg</p>
+                    </div>
+                    <div>
+                        <h3>Kontakta mig:</h3>
+                        <div class="center column">
+                            <p>Email: fille.risberg@live.se</p>
+                            <p>Mobil: 0733805263</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center column">
+                    <h3 lang="en">Links:</h3>
+                    <h3 lang="sv" class="is-none">Länkar:</h3>
+                    <div>
+                        <a href="https://github.com/Prisberg"><i class="fa-brands fa-github-square"></i></a>
+                        <a href="https://www.instagram.com/mr.risberg/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/philip-risberg"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
 </body>
