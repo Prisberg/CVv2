@@ -120,7 +120,6 @@ function outsideMenu() {
     }, { once: true })
 }
 
-
 function iconSwitch() {
     const icon = document.getElementById('menuBurger');
     const menuInner = document.getElementById('navInner')
@@ -146,5 +145,3 @@ function tabletMedia(width) {
         icon.classList.add('open')
     }
 }
-
-//iphone doesn't listen to clicks 🤦‍♂️
