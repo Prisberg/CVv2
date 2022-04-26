@@ -22,7 +22,7 @@ function welcome() {
 }
 
 function addListener() {
-    window.addEventListener('click' || 'touchstart', enter, { once: true });
+    window.addEventListener('click', enter, { once: true });
 }
 
 function enter() {
@@ -54,7 +54,7 @@ function goToContent() {
 
 function langSwitch() {
     const button = document.getElementById('langButton')
-    button.addEventListener('click' || 'touchstart', () => {
+    button.addEventListener('click', () => {
         const swedish = document.body.querySelectorAll('[lang="sv"]');
         const english = document.body.querySelectorAll('[lang="en"]');
 
@@ -80,7 +80,7 @@ function langSwitch() {
 
 function modeSwitch() {
     const button = document.getElementById('modeButton')
-    button.addEventListener('click' || 'touchstart', () => {
+    button.addEventListener('click', () => {
         if (document.body.className === 'white') {
             document.body.className = 'gray';
             button.textContent = 'Light-mode';
@@ -95,7 +95,7 @@ function menuSwitch() {
     const button = document.getElementById('menuBurger')
     const menuInner = document.getElementById('navInner')
 
-    button.addEventListener('click' || 'touchstart', () => {
+    button.addEventListener('click', () => {
         if (menuInner.classList.contains('offRight')) {
             menuInner.classList.remove('offRight')
             outsideMenu();
@@ -110,7 +110,7 @@ function outsideMenu() {
     const menuInner = document.getElementById('navInner')
     const icon = document.getElementById('menuBurger');
 
-    layout.addEventListener('click' || 'touchstart', () => {
+    layout.addEventListener('click', () => {
         if (width.matches) {
             menuInner.classList.add('offRight')
             icon.classList.remove('open')
@@ -125,7 +125,7 @@ function iconSwitch() {
     const icon = document.getElementById('menuBurger');
     const menuInner = document.getElementById('navInner')
 
-    icon.addEventListener('click' || 'touchstart', () => {
+    icon.addEventListener('click', () => {
         if (!menuInner.classList.contains('offRight')) {
             icon.classList.add('open')
         } else {
@@ -146,3 +146,5 @@ function tabletMedia(width) {
         icon.classList.add('open')
     }
 }
+
+//iphone doesn't listen to clicks 🤦‍♂️
