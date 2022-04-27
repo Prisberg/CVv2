@@ -93,7 +93,7 @@ body {
     z-index: 3;
     position: fixed;
     background-color: white;
-    border: solid 0.5rem black;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
 
 #entrance:hover {
