@@ -16,6 +16,7 @@ Ctrl + f */
 
 body {
     transition: background-color .7s ease, color .7s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     height: 100%;
 }
 
