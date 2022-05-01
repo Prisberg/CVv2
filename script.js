@@ -6,7 +6,12 @@ window.onload = function () {
     width.addEventListener('change', tabletMedia)
     interval = setInterval(welcome, 1250)
 
-    addListener();
+    const urlPath = location.href.toString()
+    if (!urlPath.includes('#thanks')) {
+        addListener();
+    } else {
+        thanks();
+    }
 }
 
 function welcome() {
@@ -147,9 +152,18 @@ function tabletMedia(width) {
 }
 
 function thanks() {
-    const form = document.getElementsByTagName('form')
+    const form = document.getElementsByClassName('form')
+    const thanks = document.getElementById('thanks')
+    const urlPath = location.href.toString()
 
-    if (location.href.contains('#thanks')) {
-        console.log('thank you')
+    if (urlPath.includes('#thanks')) {
+        for (let i = 0; i < form.length; i++) {
+            const element = form[i];
+            element.classList.add('is-none')
+        }
+
+        enter();
+        thanks.className = ''
+        console.log(form)
     }
 }
