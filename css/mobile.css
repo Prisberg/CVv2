@@ -232,7 +232,8 @@ h3 {
 
 
 textarea[type=text],
-input[type=email] {
+input[type=email],
+input[type=name] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -240,7 +241,7 @@ input[type=email] {
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
-    font-family: Arial, sans-serif;
+    font-family: Sen, sans-serif;
     font-size: 1rem;
 }
 
