@@ -145,3 +145,11 @@ function tabletMedia(width) {
         icon.classList.add('open')
     }
 }
+
+function thanks() {
+    const form = document.getElementsByTagName('form')
+
+    if (location.href.contains('#thanks')) {
+        console.log('thank you')
+    }
+}
