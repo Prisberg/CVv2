@@ -35,11 +35,11 @@ function goToContent() {
     const layout = document.getElementById('layout');
     const click = document.getElementById('click');
     const nameTitel = document.getElementById('nameTitel');
+    document.body.classList.remove('overflow');
 
     entrance.classList.add('offTop');
     entrance.addEventListener('transitionend', () => {
         entrance.className = 'is-none'
-        document.body.classList.remove('overflow');
     })
 
     layout.className = '';

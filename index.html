@@ -13,9 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Russo+One&family=Sen&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="mobile.css">
-    <link rel="stylesheet" href="tablet.css">
-    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/desktop.css">
 
     <script src="https://kit.fontawesome.com/c412bb76bf.js" crossorigin="anonymous"></script>
     <script defer src="./script.js"></script>
@@ -86,6 +86,54 @@
                         <p>födelseort: Höör, Skåne.</p>
                         <p>Kön: Man.</p>
                     </div>
+                    <hr class="divider">
+                    <div lang="en">
+                        <h3>Education:</h3>
+                        <p>
+                            2021-ongoing
+                            <br>
+                            Vocational university, Front-End Developer, Medieinstitutet, Gothenburg.
+                        </p>
+                        <p>
+                            2014-2017
+                            <br>
+                            Upper secondary school, Aesthetic program with focus on media, Spyken, Lund.
+                        </p>
+                        <p>
+                            2013-2014
+                            <br>
+                            Course, Technical program with focus on media, Polhemskolan, Lund.
+                        </p>
+                        <p>
+                            2003-2013
+                            <br>
+                            Comprehensive school, Sätoftaskolan, Höör
+                        </p>
+                    </div>
+                    <div lang="sv" class="is-none">
+                        <h3>Utbildningar:</h3>
+                        <p>
+                            2021-pågående
+                            <br>
+                            Yrkeshögskola, Front-End Utvecklare, Medieinstitutet, Göteborg.
+                        </p>
+                        <p>
+                            2014-2017
+                            <br>
+                            Gymnasieskola, Estetiska programmet-inriktning media, Spyken, Lund.
+                        </p>
+                        <p>
+                            2013-2014
+                            <br>
+                            Kurs, Tekniska programmet-inriktning media, Polhemskolan, Lund.
+                        </p>
+                        <p>
+                            2003-2013
+                            <br>
+                            Grundskola, Sätoftaskolan, Höör
+                        </p>
+                    </div>
+                    <hr class="divider">
                     <div>
                         <h3 lang="en">Skillsets:</h3>
                         <h3 lang="sv" class="is-none">Kompetens:</h3>
@@ -126,53 +174,6 @@
                         </div>
                         </p>
                     </div>
-                </div>
-                <div lang="en">
-                    <h3>Education:</h3>
-                    <p>
-                        2021-ongoing
-                        <br>
-                        Vocational university, Front-End Developer, Medieinstitutet, Gothenburg.
-                    </p>
-                    <p>
-                        2014-2017
-                        <br>
-                        Upper secondary school, Aesthetic program with focus on media, Spyken, Lund.
-                    </p>
-                    <p>
-                        2013-2014
-                        <br>
-                        Course, Technical program with focus on media, Polhemskolan, Lund.
-                    </p>
-                    <p>
-                        2003-2013
-                        <br>
-                        Comprehensive school, Sätoftaskolan, Höör
-                    </p>
-
-                </div>
-                <div lang="sv" class="is-none">
-                    <h3>Utbildningar:</h3>
-                    <p>
-                        2021-pågående
-                        <br>
-                        Yrkeshögskola, Front-End Utvecklare, Medieinstitutet, Göteborg.
-                    </p>
-                    <p>
-                        2014-2017
-                        <br>
-                        Gymnasieskola, Estetiska programmet-inriktning media, Spyken, Lund.
-                    </p>
-                    <p>
-                        2013-2014
-                        <br>
-                        Kurs, Tekniska programmet-inriktning media, Polhemskolan, Lund.
-                    </p>
-                    <p>
-                        2003-2013
-                        <br>
-                        Grundskola, Sätoftaskolan, Höör
-                    </p>
                 </div>
             </div>
             <div class="text">
@@ -242,11 +243,15 @@
                     </div>
                     <br>
                     <div>
-                        <h3>Contact information:</h3>
-                        <div class="center column">
-                            <p>Email: fille.risberg@live.se</p>
-                            <p>Phone number: 0733805263</p>
-                        </div>
+                        <h3>Contact me:</h3>
+                        <form class="center column" action="https://formsubmit.co/fille.risberg@live.se" method="POST">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="email" name="email" placeholder="Your email" required>
+                            <input type="hidden" name="_subject" value="New submission!">
+                            <textarea type="text" name="message" rows="6" placeholder="Your message"
+                                required></textarea>
+                            <button class="menuButtons" type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
                 <div lang="sv" class="is-none">
@@ -259,10 +264,14 @@
                     <br>
                     <div>
                         <h3>Kontakta mig:</h3>
-                        <div class="center column">
-                            <p>Email: fille.risberg@live.se</p>
-                            <p>Mobil: 0733805263</p>
-                        </div>
+                        <form class="center column" action="https://formsubmit.co/fille.risberg@live.se" method="POST">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="email" name="email" placeholder="Din email" required>
+                            <input type="hidden" name="_subject" value="New submission!">
+                            <textarea type="text" name="message" rows="6" placeholder="Ditt meddelande"
+                                required></textarea>
+                            <button class="menuButtons" type="submit">Skicka</button>
+                        </form>
                     </div>
                 </div>
                 <div class="center column">

@@ -102,7 +102,7 @@ body {
 }
 
 #name {
-    background-image: url("./assets/giphy.gif");
+    background-image: url("../assets/giphy.gif");
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -150,7 +150,7 @@ nav {
     width: max-content;
     padding-top: 6rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
-    border-radius: 0 0 0 1rem;
+    border-radius: 0 0 0 9px;
     transition: transform 0.3s ease-in-out;
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -200,7 +200,14 @@ nav {
     margin: 1rem auto;
     height: 2px;
     border-width: 0;
-    width: 350px;
+    width: 100%;
+    background-color: black;
+}
+
+.divider {
+    margin: 1rem;
+    width: 2px;
+    border-width: 0;
     background-color: black;
 }
 
@@ -221,6 +228,20 @@ h3 {
 
 .text>div {
     margin: 1rem 0;
+}
+
+
+textarea[type=text],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 /* end of LAYOUT */
@@ -330,10 +351,6 @@ h3 {
     z-index: -1;
     background: #72dc4f;
     transition: all 0.3s ease;
-}
-
-.menuButtons:hover {
-    color: #000;
 }
 
 .menuButtons:hover:after {
