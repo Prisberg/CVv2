@@ -154,16 +154,12 @@ function tabletMedia(width) {
 function thanks() {
     const form = document.getElementsByClassName('form')
     const thanks = document.getElementById('thanks')
-    const urlPath = location.href.toString()
 
-    if (urlPath.includes('#thanks')) {
-        for (let i = 0; i < form.length; i++) {
-            const element = form[i];
-            element.classList.add('is-none')
-        }
-
-        enter();
-        thanks.className = ''
-        console.log(form)
+    for (let i = 0; i < form.length; i++) {
+        const element = form[i];
+        element.classList.add('is-none')
     }
+
+    enter();
+    thanks.className = ''
 }
