@@ -1,14 +1,14 @@
 @media only screen and (min-width: 1200px) {
 
+    #me {
+        width: 23rem;
+        margin-right: 6rem;
+    }
+
     #start {
         display: flex;
         justify-content: center;
         flex-direction: row;
-    }
-
-    #me {
-        width: 30rem;
-        margin-right: 6rem;
     }
 
     .text {
@@ -17,6 +17,10 @@
 }
 
 @media only screen and (min-width: 1900px) {
+
+    #me {
+        width: 30rem;
+    }
 
     .linebreak {
         height: 4px;

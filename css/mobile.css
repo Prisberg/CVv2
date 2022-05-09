@@ -44,6 +44,10 @@ body {
     padding-top: 1rem;
 }
 
+ .rowSpace>div:nth-child(2n+1) {
+    align-self: center;
+}
+
 .overflow {
     overflow: hidden;
 }

@@ -26,6 +26,10 @@
         text-align: center;
     }
 
+    .rowSpace>div:nth-child(2n+1) {
+        align-self: baseline;
+    }
+
     #skillsets>p {
         margin: 0.5rem;
     }
